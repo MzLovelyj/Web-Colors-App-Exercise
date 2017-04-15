@@ -1,0 +1,19 @@
+<h2>Red Category</h2>
+
+<ul>
+  <% colors.forEach((oneColor) => {
+     if (oneColor.category === ‘red’){ %>
+
+       <li>
+
+         <div style=“width:60px;height:40px;background-color:<%= oneColor.hex %>; border: 1px solid black;“></div>
+         <%= oneColor.keyword %>
+         <%= oneColor.hex %>
+
+
+       </li>
+
+   <%  };
+    }) %>
+
+</ul>

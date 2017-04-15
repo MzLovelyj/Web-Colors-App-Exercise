@@ -1,0 +1,18 @@
+<h2>Grayscale Category</h2>
+
+<ul>
+  <% colors.forEach((oneColor) => {
+     if (oneColor.category === ‘grayscale’){ %>
+
+       <li>
+
+         <div style=“width:60px;height:40px;background-color:<%= oneColor.hex %>; border: 1px solid black;“></div>
+         <%= oneColor.keyword %>
+         <%= oneColor.hex %>
+
+
+       </li>
+
+   <%  };
+    }) %>
+</ul>
