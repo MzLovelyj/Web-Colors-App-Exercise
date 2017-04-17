@@ -1,18 +1,21 @@
-<h2>Green Category</h2>
+  <h2 style="color:#009245;">Green Category &#9752;	</h2>
+  <br>
 
-<ul>
-  <% colors.forEach((oneColor) => {
-     if (oneColor.category === ‘green’){ %>
+<% colors.forEach((oneColor)=>{%>
+  <% if (oneColor.category === 'green') {%>
 
-       <li>
+    <div class='col-md-4'>
+      <div class='row' style="background-color: <%=oneColor.hex%>">
+      </div>
 
-         <div style=“width:60px;height:40px;background-color:<%= oneColor.hex %>; border: 1px solid black;“></div>
-         <%= oneColor.keyword %>
-         <%= oneColor.hex %>
+      <div>
+        Name: <%= oneColor.keyword%> <br>
+        Hex: <%= oneColor.hex%> <br>
+        Category: <%= oneColor.category%>
+      </div>
 
+      <br>
 
-       </li>
-
-   <%  };
-    }) %>
-</ul>
+    </div>
+    <%}%>
+      <%});%>

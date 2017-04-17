@@ -1,11 +1,8 @@
 const express = require('express');
-
 const expressLayouts = require('express-ejs-layouts');
-
 const app = express();
 
 app.use(express.static('public'));
-
 app.use(expressLayouts);
 
 app.locals.title = ('Colors.io');
@@ -15,16 +12,20 @@ app.set('layout', 'layouts/main-layout.ejs');
 app.set('views', 'views');
 app.set('view engine', 'ejs');
 
+//Home Page
 app.get('/', (req, res, next) =>{
+  console.log('HOME PAGE');
   res.render('home.ejs');
 });
-
+//page with all the Colors Array
 app.get('/colors', (req, res, next) => {
+  console.log('Colors PAGE');
   res.render('colors.ejs', {
     colors: colorList
   });
 });
 
+//3Pages: colors
 app.get('/green', (req, res, next) =>{
   res.render('green.ejs', {
     colors: colorList
@@ -43,6 +44,7 @@ app.get('/grayscale', (req, res, next) =>{
   });
 });
 
+//Array of the colors in the database
 const colorList = [
   { keyword: 'black',                hex: '#000000', category: 'grayscale' },
   { keyword: 'silver',               hex: '#c0c0c0', category: 'grayscale' },
