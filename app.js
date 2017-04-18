@@ -43,6 +43,12 @@ app.get('/grayscale', (req, res, next) =>{
     colors: colorList
   });
 });
+//Random
+app.get('/randomness', (req, res, next) =>{
+  res.render('randomness.ejs', {
+    colors: colorList
+  });
+});
 
 //Array of the colors in the database
 const colorList = [

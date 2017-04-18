@@ -10,19 +10,17 @@ p{
   font-size: 20px;
 
 }
-.home{
-  border-radius: 10px;
-  border: 2px solid black;
-  width:auto;
-  height:auto;
-  background-color: #d7e8f2;
 
+.random{
+  width:auto;
+  height:250px;
 }
+
 .row{
   border-radius: 10px;
   border: 1px solid black;
-  width:110px;
-  height:100px;
+  width:140px;
+  height:120px;
 }
 
 h1,h2{
@@ -31,7 +29,6 @@ h1,h2{
 a{
   color:  #00A99D;
   font-size: 15px;
-  cursor: pointer;
 }
 
 a:hover{
